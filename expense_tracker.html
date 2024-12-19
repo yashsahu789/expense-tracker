@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXPENCE TRACKER</title>
+    <link rel="stylesheet" href="expense_tracker.css">
+</head>
+<body>
+    <div class="container">
+        <header><h1>EXPENSE TRACKER</h1></header>
+
+    <h2>INCOME</h2>
+
+        <div class="inp">
+
+    <label for="inc-description">Description</label>  
+        <input type="text" id="inc-description" placeholder="e.g. Salary"><br>
+    
+    <label for="inc-amt">Amount</label>    
+        <input type="number" id="inc-amt" min="0" placeholder="e.g. 25000"><br>
+
+        </div>
+
+        <button onclick="income()">ADD INCOME</button>
+
+<h2>EXPENSES</h2>
+        
+        <div class="inp">
+
+    <label for="exp-description">Description</label>
+        <input type="text" id="exp-description" placeholder="e.g. Shopping"><br>
+        
+    <label for="exp-category">Category</label>    
+        <input type="text" id="exp-category" list="option" placeholder="HOUSING"><br>
+        <datalist id="option">
+            <option value="FOOD">
+            <option value="TRANSPORTATION">
+            <option value="ENTERTENMENT">
+            <option value="OTHERS">
+        </datalist>
+        
+
+    <label for="exp-amount">Amount</label>
+        <input type="number" id="exp-amount" placeholder="e.g. 100">
+
+        </div>
+
+        <button onclick="expence()">Add Expenses</button>
+
+<h2>TRANSACTION HISTORY </h2>
+
+       <h3 >Description:</h3> <p id="th-des"></p>
+       <h3 > Category:</h3> <p id="th-cat"></p>
+       <h3 >Amount:</h3> <p id="th-amt"></p> 
+
+        <button onclick="add_income()">ADD IN TOTAL</button>
+
+<h2>BUGET SUMMARY</h2>    
+       <div class="zzz">
+        <h3 >Total Income:</h3>   <p id="bs-inc"></p>
+        <h3>Total Expenses:</h3>   <p id="bs-texp"></p>
+        <h3>Balance:</h3>           <p id="bs-bal"></p>  
+       </div>  
+
+        <button onclick="clearall()">Clear All</button>
+
+    </div>
+    <script src="expense_tracker.js"></script>
+   
+</body>
+</html>
